@@ -1,7 +1,5 @@
 # GFG RAG Application
 
-![RAG App Banner](https://imgur.com/4M7IWwP.png)
-
 A **Retrieval-Augmented Generation (RAG) Application** that allows you to query across website URLs, images, files, and YouTube videos—all in one place! Built with Flask, LangChain, and a beautiful, modern UI.
 
 ---
@@ -33,7 +31,7 @@ A **Retrieval-Augmented Generation (RAG) Application** that allows you to query 
 ### 1. Clone the Repository
 ```bash
 # Using PowerShell
-git clone <your-repo-url>
+git clone https://github.com/piyush230502/RAG_QUERY_APPLICATION/
 cd GFG_RAG
 ```
 
@@ -104,15 +102,13 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ---
 
 ## 📄 License
-This project is licensed under the MIT License.
+This project is licensed under the APACHE 2.0  License.
 
 ---
 
 ## 🙏 Acknowledgements
 - [LangChain](https://github.com/langchain-ai/langchain)
 - [Flask](https://flask.palletsprojects.com/)
-- [GFG Community](https://www.geeksforgeeks.org/)
 
----
 
-> Made with ❤️ for the Generative AI community.
+
