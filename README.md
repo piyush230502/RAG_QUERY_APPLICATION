@@ -22,7 +22,7 @@ A **Retrieval-Augmented Generation (RAG) Application** that allows you to query 
 
 ## 🖥️ Demo
 
-![App Screenshot](https://imgur.com/8Q2Qw7B.png)
+![App Screenshot](https://drive.google.com/file/d/1t_Dkc3dF8SpZCDJyI1HH5mv-gTbVZwQJ/view?usp=sharing)
 
 ---
 
