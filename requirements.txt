@@ -1,0 +1,11 @@
+langchain
+langchain_community
+pytesseract
+pillow
+requests
+bs4
+PyPDF2
+python-docx
+yt_dlp
+youtube_transcript_api
+flask

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Query App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            font-family: 'Roboto', 'Montserrat', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: rgba(255,255,255,0.95);
+            border-radius: 22px;
+            box-shadow: 0 10px 40px 0 rgba(245, 87, 108, 0.18);
+            padding: 48px 36px 36px 36px;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: #f5576c;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        label {
+            font-weight: 700;
+            color: #f5576c;
+            font-size: 1.1rem;
+        }
+        input[type="text"], input[type="file"] {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1.5px solid #f093fb;
+            font-size: 1.05rem;
+            background: #f9f6ff;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus, input[type="file"]:focus {
+            border: 1.5px solid #f5576c;
+            outline: none;
+        }
+        button {
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 14px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 8px 0 rgba(245, 87, 108, 0.10);
+        }
+        button:hover {
+            background: linear-gradient(90deg, #f5576c 0%, #f093fb 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .result {
+            margin-top: 32px;
+            background: #fff0f6;
+            border-radius: 12px;
+            padding: 22px;
+            color: #3d2c41;
+            font-size: 1.08rem;
+            box-shadow: 0 2px 8px 0 rgba(245, 87, 108, 0.08);
+            max-height: 350px;
+            overflow-y: auto;
+            white-space: pre-line;
+        }
+        .result strong {
+            color: #f5576c;
+            font-size: 1.15rem;
+        }
+        .brand {
+            position: absolute;
+            top: 18px;
+            right: 28px;
+            font-size: 1.1rem;
+            color: #f093fb;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 24px 8px 18px 8px; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="brand">GFG RAG</div>
+        <h1>RAG Query App</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="website_url">Website URL(s):</label>
+            <input type="text" id="website_url" name="website_url" placeholder="Comma separated URLs">
+
+            <label for="image_file">Image File:</label>
+            <input type="file" id="image_file" name="image_file" accept="image/*">
+
+            <label for="youtube_url">YouTube URL:</label>
+            <input type="text" id="youtube_url" name="youtube_url" placeholder="YouTube video URL">
+
+            <label for="query">Your Query:</label>
+            <input type="text" id="query" name="query" placeholder="Ask your question..." required>
+
+            <button type="submit">Get Answer</button>
+        </form>
+        {% if result %}
+        <div class="result">
+            <strong>Processed Content:</strong><br>
+            {{ result }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
