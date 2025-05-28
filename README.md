@@ -1,4 +1,4 @@
-# GFG RAG Application
+# RAG Application
 
 A **Retrieval-Augmented Generation (RAG) Application** that allows you to query across website URLs, images, files, and YouTube videos—all in one place! Built with Flask, LangChain, and a beautiful, modern UI.
 
